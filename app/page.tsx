@@ -2457,9 +2457,9 @@ case 4: // OLD STAGE 2: Detection and Notifications
             </div>
             <Button
   onClick={nextStage}
-  className="mt-10 px-4 sm:px-10 py-4 sm:py-5 text-xs sm:text-lg font-bold uppercase gradient-premium text-white rounded-xl shadow-2xl hover:opacity-90 transition-all duration-300 transform hover:scale-105 animate-pulse-glow w-full max-w-sm mx-auto text-center whitespace-normal leading-tight"
+  className="mt-6 px-3 py-2 text-[10px] sm:text-sm font-bold uppercase gradient-premium text-white rounded-lg shadow-xl hover:opacity-90 transition-all duration-300 animate-pulse-glow mx-auto text-center whitespace-normal leading-tight"
   >
-  IF YOU ARE SURE YOU WANT TO CONTINUE, CLICK HERE
+  IF YOU ARE SURE, CLICK HERE
   </Button>
           </div>
         )
