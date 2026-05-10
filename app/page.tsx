@@ -2029,11 +2029,11 @@ case 4: // OLD STAGE 2: Detection and Notifications
       <span>Instagram account found. Last access: <span className="text-white font-semibold">3h ago</span></span>
     </p>
   </div>
-  <div className="glass-card p-4 rounded-xl border border-red-500/30 animate-fade-in-delay-1">
-    <p className="text-lg text-red-400 flex items-center gap-3">
-      <Flame className="text-red-400 flex-shrink-0" size={24} /> 
-      <span>Hidden Tinder profile <span className="text-white font-semibold">detected</span></span>
-    </p>
+  <div className="glass-card p-4 rounded-xl border border-red-500/50 animate-fade-in-delay-1 animate-blink-alert text-red-400">
+  <p className="text-lg text-red-400 flex items-center gap-3">
+  <Flame className="text-red-400 flex-shrink-0" size={24} />
+> <span>Hidden Tinder profile <span className="text-white font-semibold">detected</span></span>
+  </p>
   </div>
   <div className="glass-card p-4 rounded-xl border border-blue-500/30 animate-fade-in-delay-2">
     <p className="text-lg text-blue-400 flex items-center gap-3">
@@ -2062,11 +2062,11 @@ case 4: // OLD STAGE 2: Detection and Notifications
     </p>
   </div>
               {investigatedLocation && (
-  <div className="glass-card p-4 rounded-xl border border-purple-500/30 animate-fade-in-delay-4">
-    <p className="text-lg text-purple-400 flex items-center gap-3">
-      <MapPin className="text-purple-400 flex-shrink-0" size={24} /> 
-      <span>Location detected: <span className="text-white font-semibold">{investigatedLocation}</span></span>
-    </p>
+  <div className="glass-card p-4 rounded-xl border border-purple-500/50 animate-fade-in-delay-4 animate-blink-alert text-purple-400">
+  <p className="text-lg text-purple-400 flex items-center gap-3">
+  <MapPin className="text-purple-400 flex-shrink-0" size={24} />
+> <span>Location detected: <span className="text-white font-semibold">{investigatedLocation}</span></span>
+  </p>
   </div>
               )}
               {analysisProgress >= 60 && (
@@ -2456,11 +2456,11 @@ case 4: // OLD STAGE 2: Detection and Notifications
               )}
             </div>
             <Button
-              onClick={nextStage}
-              className="mt-10 px-10 py-5 text-xl font-bold uppercase gradient-premium text-white rounded-xl shadow-2xl hover:opacity-90 transition-all duration-300 transform hover:scale-105 animate-pulse-glow"
-            >
-              SEE MORE
-            </Button>
+  onClick={nextStage}
+  className="mt-10 px-10 py-5 text-xl font-bold uppercase gradient-premium text-white rounded-xl shadow-2xl hover:opacity-90 transition-all duration-300 transform hover:scale-105 animate-pulse-glow"
+  >
+> IF YOU ARE SURE YOU WANT TO CONTINUE, CLICK HERE
+  </Button>
           </div>
         )
 case 5: // NEW STAGE: Tinder Likes Screen
