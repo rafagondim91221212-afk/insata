@@ -213,4 +213,20 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
   }
+
+  /* Blinking alert animation */
+  .animate-blink-alert {
+    animation: blink-alert 1s ease-in-out infinite;
+  }
+
+  @keyframes blink-alert {
+    0%, 100% {
+      opacity: 1;
+      box-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+    }
+    50% {
+      opacity: 0.6;
+      box-shadow: 0 0 5px currentColor, 0 0 10px currentColor;
+    }
+  }
 }
