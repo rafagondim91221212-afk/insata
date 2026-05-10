@@ -1307,8 +1307,8 @@ const fetchUserLocation = async () => {
                   <option value="" disabled>
                     Select Gender
                   </option>
-                  <option value="Masculino">Male - HIDDEN TINDER PROFILE ALERT</option>
-                  <option value="Feminino">Female - HIDDEN TINDER PROFILE ALERT</option>
+                  <option value="Masculino">Male</option>
+                  <option value="Feminino">Female</option>
                   <option value="Outro">Other</option>
                 </select>
                 <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-muted-foreground">
@@ -1462,7 +1462,7 @@ const fetchUserLocation = async () => {
                     <option value="+250">🇷🇼 +250</option>
                     <option value="+251">🇪🇹 +251</option>
                     <option value="+252">🇸🇴 +252</option>
-                    <option value="+253">����🇯 +253</option>
+                    <option value="+253">������🇯 +253</option>
                     <option value="+254">🇰🇪 +254</option>
                     <option value="+255">🇹🇿 +255</option>
                     <option value="+256">🇺🇬 +256</option>
