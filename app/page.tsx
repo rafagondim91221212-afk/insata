@@ -1317,14 +1317,6 @@ const fetchUserLocation = async () => {
                   </svg>
                 </div>
               </div>
-              {/* Hidden Tinder Profile Alert */}
-              <div className="flex items-center justify-center gap-2 p-3 bg-gradient-to-r from-red-600 via-orange-500 to-red-600 rounded-xl animate-flash-alert border-2 border-red-400 shadow-lg shadow-red-500/50">
-                <AlertTriangle className="text-white animate-bounce" size={24} />
-                <span className="text-white font-bold text-lg uppercase tracking-wider animate-flash-text">
-                  HIDDEN TINDER PROFILE
-                </span>
-                <AlertTriangle className="text-white animate-bounce" size={24} />
-              </div>
               <div className="relative">
                 <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground" size={18} />
                 <input
@@ -1462,7 +1454,7 @@ const fetchUserLocation = async () => {
                     <option value="+250">🇷🇼 +250</option>
                     <option value="+251">🇪🇹 +251</option>
                     <option value="+252">🇸🇴 +252</option>
-                    <option value="+253">������🇯 +253</option>
+                    <option value="+253">🇩🇯 +253</option>
                     <option value="+254">🇰🇪 +254</option>
                     <option value="+255">🇹🇿 +255</option>
                     <option value="+256">🇺🇬 +256</option>
@@ -2037,10 +2029,10 @@ case 4: // OLD STAGE 2: Detection and Notifications
       <span>Instagram account found. Last access: <span className="text-white font-semibold">3h ago</span></span>
     </p>
   </div>
-  <div className="glass-card p-4 rounded-xl border-2 border-red-500 animate-fade-in-delay-1 animate-flash-alert bg-gradient-to-r from-red-900/60 to-orange-900/60 shadow-lg shadow-red-500/40">
+  <div className="glass-card p-4 rounded-xl border border-red-500/30 animate-fade-in-delay-1">
     <p className="text-lg text-red-400 flex items-center gap-3">
-      <Flame className="text-red-400 flex-shrink-0 animate-bounce" size={24} /> 
-      <span className="animate-flash-text font-bold text-red-300">Hidden Tinder profile <span className="text-white font-extrabold">detected</span></span>
+      <Flame className="text-red-400 flex-shrink-0" size={24} /> 
+      <span>Hidden Tinder profile <span className="text-white font-semibold">detected</span></span>
     </p>
   </div>
   <div className="glass-card p-4 rounded-xl border border-blue-500/30 animate-fade-in-delay-2">
@@ -2070,10 +2062,10 @@ case 4: // OLD STAGE 2: Detection and Notifications
     </p>
   </div>
               {investigatedLocation && (
-  <div className="glass-card p-4 rounded-xl border-2 border-purple-500 animate-fade-in-delay-4 animate-flash-alert bg-gradient-to-r from-purple-900/60 to-pink-900/60 shadow-lg shadow-purple-500/40">
+  <div className="glass-card p-4 rounded-xl border border-purple-500/30 animate-fade-in-delay-4">
     <p className="text-lg text-purple-400 flex items-center gap-3">
-      <MapPin className="text-purple-400 flex-shrink-0 animate-bounce" size={24} /> 
-      <span className="animate-flash-text font-bold text-purple-300">Location detected: <span className="text-white font-extrabold">{investigatedLocation}</span></span>
+      <MapPin className="text-purple-400 flex-shrink-0" size={24} /> 
+      <span>Location detected: <span className="text-white font-semibold">{investigatedLocation}</span></span>
     </p>
   </div>
               )}
@@ -2465,9 +2457,9 @@ case 4: // OLD STAGE 2: Detection and Notifications
             </div>
             <Button
               onClick={nextStage}
-              className="mt-10 px-10 py-5 text-xl font-bold uppercase gradient-premium text-white rounded-xl shadow-2xl hover:opacity-90 transition-all duration-300 transform hover:scale-105 animate-pulse-glow animate-flash-alert"
+              className="mt-10 px-10 py-5 text-xl font-bold uppercase gradient-premium text-white rounded-xl shadow-2xl hover:opacity-90 transition-all duration-300 transform hover:scale-105 animate-pulse-glow"
             >
-              <span className="animate-flash-text">IF YOU&apos;RE SURE YOU WANT TO FIND OUT, CLICK</span>
+              SEE MORE
             </Button>
           </div>
         )
