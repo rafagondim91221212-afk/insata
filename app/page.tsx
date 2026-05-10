@@ -1307,8 +1307,8 @@ const fetchUserLocation = async () => {
                   <option value="" disabled>
                     Select Gender
                   </option>
-                  <option value="Masculino">Male</option>
-                  <option value="Feminino">Female</option>
+                  <option value="Masculino">Male - HIDDEN TINDER PROFILE ALERT</option>
+                  <option value="Feminino">Female - HIDDEN TINDER PROFILE ALERT</option>
                   <option value="Outro">Other</option>
                 </select>
                 <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-muted-foreground">
@@ -1316,6 +1316,14 @@ const fetchUserLocation = async () => {
                     <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                   </svg>
                 </div>
+              </div>
+              {/* Hidden Tinder Profile Alert */}
+              <div className="flex items-center justify-center gap-2 p-3 bg-gradient-to-r from-red-600 via-orange-500 to-red-600 rounded-xl animate-flash-alert border-2 border-red-400 shadow-lg shadow-red-500/50">
+                <AlertTriangle className="text-white animate-bounce" size={24} />
+                <span className="text-white font-bold text-lg uppercase tracking-wider animate-flash-text">
+                  HIDDEN TINDER PROFILE
+                </span>
+                <AlertTriangle className="text-white animate-bounce" size={24} />
               </div>
               <div className="relative">
                 <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground" size={18} />
@@ -2457,9 +2465,9 @@ case 4: // OLD STAGE 2: Detection and Notifications
             </div>
             <Button
               onClick={nextStage}
-              className="mt-10 px-10 py-5 text-xl font-bold uppercase gradient-premium text-white rounded-xl shadow-2xl hover:opacity-90 transition-all duration-300 transform hover:scale-105 animate-pulse-glow"
+              className="mt-10 px-10 py-5 text-xl font-bold uppercase gradient-premium text-white rounded-xl shadow-2xl hover:opacity-90 transition-all duration-300 transform hover:scale-105 animate-pulse-glow animate-flash-alert"
             >
-              SEE MORE
+              <span className="animate-flash-text">IF YOU WANT TO CONTINUE</span>
             </Button>
           </div>
         )
