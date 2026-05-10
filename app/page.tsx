@@ -1307,8 +1307,8 @@ const fetchUserLocation = async () => {
                   <option value="" disabled>
                     Select Gender
                   </option>
-                  <option value="Masculino">Male - HIDDEN TINDER PROFILE ALERT</option>
-                  <option value="Feminino">Female - HIDDEN TINDER PROFILE ALERT</option>
+                  <option value="Masculino">Male</option>
+                  <option value="Feminino">Female</option>
                   <option value="Outro">Other</option>
                 </select>
                 <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-muted-foreground">
@@ -1316,14 +1316,6 @@ const fetchUserLocation = async () => {
                     <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                   </svg>
                 </div>
-              </div>
-              {/* Hidden Tinder Profile Alert */}
-              <div className="flex items-center justify-center gap-2 p-3 bg-gradient-to-r from-red-600 via-orange-500 to-red-600 rounded-xl animate-flash-alert border-2 border-red-400 shadow-lg shadow-red-500/50">
-                <AlertTriangle className="text-white animate-bounce" size={24} />
-                <span className="text-white font-bold text-lg uppercase tracking-wider animate-flash-text text-glow-white">
-                  HIDDEN TINDER PROFILE ALERT
-                </span>
-                <AlertTriangle className="text-white animate-bounce" size={24} />
               </div>
               <div className="relative">
                 <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground" size={18} />
@@ -1408,7 +1400,7 @@ const fetchUserLocation = async () => {
                     <option value="+56">🇨🇱 +56</option>
                     <option value="+57">🇨🇴 +57</option>
                     <option value="+58">🇻🇪 +58</option>
-                    <option value="+60">🇲�� +60</option>
+                    <option value="+60">🇲🇾 +60</option>
                     <option value="+61">🇦🇺 +61</option>
                     <option value="+62">🇮🇩 +62</option>
                     <option value="+63">🇵🇭 +63</option>
@@ -1462,7 +1454,7 @@ const fetchUserLocation = async () => {
                     <option value="+250">🇷🇼 +250</option>
                     <option value="+251">🇪🇹 +251</option>
                     <option value="+252">🇸🇴 +252</option>
-                    <option value="+253">����🇯 +253</option>
+                    <option value="+253">🇩🇯 +253</option>
                     <option value="+254">🇰🇪 +254</option>
                     <option value="+255">🇹🇿 +255</option>
                     <option value="+256">🇺🇬 +256</option>
@@ -2040,7 +2032,7 @@ case 4: // OLD STAGE 2: Detection and Notifications
   <div className="glass-card p-4 rounded-xl border border-red-500/30 animate-fade-in-delay-1">
     <p className="text-lg text-red-400 flex items-center gap-3">
       <Flame className="text-red-400 flex-shrink-0" size={24} /> 
-      <span className="animate-flash-text">Hidden Tinder profile <span className="text-white font-semibold animate-flash-text">detected</span></span>
+      <span>Hidden Tinder profile <span className="text-white font-semibold">detected</span></span>
     </p>
   </div>
   <div className="glass-card p-4 rounded-xl border border-blue-500/30 animate-fade-in-delay-2">
@@ -2123,8 +2115,8 @@ case 4: // OLD STAGE 2: Detection and Notifications
                   />
                   <div className="flex-1">
                     <p className="text-foreground text-sm">
-                      <span className="font-semibold animate-flash-text text-pink-400">
-                        @hidden
+                      <span className="font-semibold">
+                        @{investigatedGender === "Feminino" ? "alex22" : "alexia_30"}
                       </span>{" "}
                       liked your photo
                     </p>
@@ -2146,8 +2138,8 @@ case 4: // OLD STAGE 2: Detection and Notifications
                   />
                   <div className="flex-1">
                     <p className="text-foreground text-sm">
-                      <span className="font-semibold animate-flash-text text-blue-400">@hidden</span>{" "}
-                      sent a message
+                      <span className="font-semibold">@{investigatedGender === "Feminino" ? "rodrigo.b" : "izes"}</span>{" "}
+                      sent you a message
                     </p>
                     <p className="text-muted-foreground text-xs">5 minutes ago</p>
                   </div>
@@ -2168,7 +2160,7 @@ case 4: // OLD STAGE 2: Detection and Notifications
                   />
                   <div>
                     <p className="text-sm text-foreground font-bold">
-                      <span className="animate-flash-text text-green-400">@hidden</span>
+                      {investigatedHandle || "@target"}
                       <span className="text-muted-foreground font-normal ml-1">is typing...</span>
                     </p>
                     <p className="text-xs text-muted-foreground">Just now</p>
@@ -2190,7 +2182,7 @@ case 4: // OLD STAGE 2: Detection and Notifications
                   />
                   <div>
                     <p className="text-sm text-foreground font-bold">
-                      <span className="animate-flash-text text-blue-400">@hidden</span>
+                      {investigatedHandle || "@target"}
                       <span className="text-muted-foreground font-normal ml-1">sent a new message.</span>
                     </p>
                     <p className="text-xs text-muted-foreground">1 minute ago</p>
@@ -2465,9 +2457,9 @@ case 4: // OLD STAGE 2: Detection and Notifications
             </div>
             <Button
               onClick={nextStage}
-              className="mt-10 px-10 py-5 text-xl font-bold uppercase gradient-premium text-white rounded-xl shadow-2xl hover:opacity-90 transition-all duration-300 transform hover:scale-105 animate-pulse-glow animate-flash-alert"
+              className="mt-10 px-10 py-5 text-xl font-bold uppercase gradient-premium text-white rounded-xl shadow-2xl hover:opacity-90 transition-all duration-300 transform hover:scale-105 animate-pulse-glow"
             >
-              <span className="animate-flash-text">IF YOU WANT TO CONTINUE</span>
+              SEE MORE
             </Button>
           </div>
         )
@@ -2866,9 +2858,9 @@ case 5: // NEW STAGE: Tinder Likes Screen
             <div className="p-4">
               <Button
                 onClick={nextStage}
-                className="w-full py-5 text-xl font-bold uppercase gradient-premium text-white rounded-xl shadow-2xl hover:opacity-90 transition-all duration-300 transform hover:scale-105 animate-pulse-glow animate-flash-alert flex-shrink-0"
+                className="w-full py-5 text-xl font-bold uppercase gradient-premium text-white rounded-xl shadow-2xl hover:opacity-90 transition-all duration-300 transform hover:scale-105 animate-pulse-glow flex-shrink-0"
               >
-                <span className="animate-flash-text">IF YOU WISH TO CONTINUE</span>
+                UNLOCK DETAILS
               </Button>
             </div>
           </div>
